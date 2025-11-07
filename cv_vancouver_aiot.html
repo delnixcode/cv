@@ -42,12 +42,14 @@ html, body {
 .contacts { font-size: 13px; margin-top: 8px; display:flex; flex-wrap:wrap; gap:12px 20px; }
 .contacts a { color: #fff; text-decoration: none; }
 .contacts a:hover { text-decoration: underline; }
-.layout { display:grid; grid-template-columns: 290px 1fr; }
+.layout { display:grid; grid-template-columns: 290px 1fr; min-height: 100vh; }
 .sidebar {
   background: var(--sidebar-bg);
   padding: 20px 18px 24px;
   border-right: 1px solid var(--border);
   font-size: 13px;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 .main { padding: 26px 34px 30px 40px; }
 
@@ -103,14 +105,12 @@ html, body {
   @page { size: A4; margin: 0; }
   body,html { background:white; color:black; }
   .page { border:0; box-shadow:none; margin:0; max-width: none; width: 100%; page-break-inside: avoid; min-height: 100vh; }
-  .layout { min-height: 100%; grid-template-columns: 230px 1fr; }
-  /* Conserver le gradient et alignement du topbar */
+  .layout { min-height: 100vh; grid-template-columns: 230px 1fr; }
   .topbar { padding: 14px 16px; background: linear-gradient(90deg, var(--primary), var(--accent)); color: white; }
   .name { font-size: 20px; margin-bottom: 4px; }
   .title { font-size: 12px; }
   .contacts { font-size: 10px; gap: 7px 12px; }
-  /* Conserver le background gris de la sidebar */
-  .sidebar { padding: 14px 16px; font-size: 10px; background: var(--sidebar-bg); }
+  .sidebar { padding: 14px 16px; font-size: 10px; background: var(--sidebar-bg); min-height: 100vh; box-sizing: border-box; }
   .main { padding: 14px 18px 14px 20px; background: white; }
   .h { font-size: 10px; margin: 10px 0 5px; padding-bottom: 4px; }
   .chips { gap: 6px; margin-bottom: 6px; display: flex; flex-wrap: wrap; }
