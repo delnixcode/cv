@@ -17,6 +17,7 @@
   --chip-bg: #eef2ff;
   --chip-border: #c7d2fe;
   --chip-text: #1e3a8a;
+  --base-font-size: 18px;
 }
 html, body {
   margin: 0; padding: 0;
@@ -24,6 +25,8 @@ html, body {
   color: var(--text);
   font-family: var(--font-sans);
   line-height: 1.55;
+  height: 100%;
+  font-size: var(--base-font-size);
 }
 .page {
   max-width: 1040px;
@@ -31,6 +34,10 @@ html, body {
   background: white;
   border: 1px solid var(--border);
   box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 .topbar {
   background: linear-gradient(90deg, var(--primary), var(--accent));
@@ -42,16 +49,18 @@ html, body {
 .contacts { font-size: 13px; margin-top: 8px; display:flex; flex-wrap:wrap; gap:12px 20px; }
 .contacts a { color: #fff; text-decoration: none; }
 .contacts a:hover { text-decoration: underline; }
-.layout { display:grid; grid-template-columns: 290px 1fr; min-height: 100vh; }
+.layout { display:grid; grid-template-columns: 290px 1fr; flex: 1; min-height: 0; height: 100%; }
 .sidebar {
   background: var(--sidebar-bg);
   padding: 20px 18px 24px;
   border-right: 1px solid var(--border);
-  font-size: 13px;
-  min-height: 100vh;
+  font-size: 1em;
   box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
-.main { padding: 26px 34px 30px 40px; }
+.main { padding: 30px 40px 40px 50px; font-size: 3em; line-height: 2; }
 
 .h {
   font-size: 13px;
@@ -79,7 +88,7 @@ html, body {
 
 .summary {
   border-left: 3px solid var(--accent);
-  padding: 12px 16px;
+  padding: 16px 20px;
   background: #f9fafb;
   border-radius: 6px;
   font-size: 14px;
@@ -87,7 +96,7 @@ html, body {
 }
 
 .role {
-  margin-top: 14px;
+  margin-top: 20px;
   padding-top: 10px;
   border-top: 1px solid var(--border);
 }
@@ -103,15 +112,16 @@ html, body {
 }
 @media print {
   @page { size: A4; margin: 0; }
+  html, body { font-size: 16px; }
   body,html { background:white; color:black; }
   .page { border:0; box-shadow:none; margin:0; max-width: none; width: 100%; page-break-inside: avoid; min-height: 100vh; }
-  .layout { min-height: 100vh; grid-template-columns: 230px 1fr; }
+  .layout { grid-template-columns: 230px 1fr; height: 100%; }
   .topbar { padding: 14px 16px; background: linear-gradient(90deg, var(--primary), var(--accent)); color: white; }
   .name { font-size: 20px; margin-bottom: 4px; }
   .title { font-size: 12px; }
   .contacts { font-size: 10px; gap: 7px 12px; }
-  .sidebar { padding: 14px 16px; font-size: 10px; background: var(--sidebar-bg); min-height: 100vh; box-sizing: border-box; }
-  .main { padding: 14px 18px 14px 20px; background: white; }
+  .sidebar { padding: 14px 16px; font-size: 10px; background: var(--sidebar-bg); box-sizing: border-box; height: 100%; }
+  .main { padding: 16px 20px 16px 24px; background: white; font-size: 2.5em; line-height: 1.8; }
   .h { font-size: 10px; margin: 10px 0 5px; padding-bottom: 4px; }
   .chips { gap: 6px; margin-bottom: 6px; display: flex; flex-wrap: wrap; }
   .chip { 
@@ -128,8 +138,8 @@ html, body {
   .kv, .edu { font-size: 10px; line-height: 1.45; margin: 4px 0; }
   .sidebar ul { margin: 4px 0 4px 13px; font-size: 10px; line-height: 1.48; }
   .sidebar ul li { margin: 2px 0; }
-  .summary { padding: 10px 14px; font-size: 11px; line-height: 1.52; background: #f9fafb; }
-  .role { margin-top: 9px; padding-top: 6px; }
+  .summary { padding: 12px 16px; font-size: 11px; line-height: 1.52; background: #f9fafb; }
+  .role { margin-top: 12px; padding-top: 6px; }
   .role .rt { font-size: 12px; }
   .role .co { font-size: 11px; }
   .role .meta { font-size: 9px; margin: 2px 0 4px; }
@@ -206,7 +216,7 @@ html, body {
       <div class="summary">
         Applied R&D engineer and team leader with <strong>12+ years of experience</strong> in AIoT, SaaS, and product innovation.  
         Started at the <strong>CEA</strong> (French Alternative Energies & Atomic Energy Commission), where I learned to bridge scientific research with real-world applications.  
-        Over the past 7 years in <strong>startup environments</strong>, I’ve led multidisciplinary projects from concept to commercialization, driving engineering, strategy, and go-to-market execution.  
+        Over the past 6 years in <strong>startup environments</strong>, I’ve led multidisciplinary projects from concept to commercialization, driving engineering, strategy, and go-to-market execution.  
         A versatile, results-driven engineer with a strategic mindset, passionate about turning <strong>innovation</strong> into tangible impact.
       </div>
 
