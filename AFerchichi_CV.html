@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Abdelrahmane FERCHICHI — Responsable R&D – AIoT & Innovation Produit</title>
+<style>
+:root {
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --bg: #f9fafb;
+  --text: #111827;
+  --muted: #4b5563;
+  --primary: #1e40af;
+  --accent: #7c3aed;
+  --border: #e5e7eb;
+  --sidebar-bg: #f3f4f6;
+  --chip-bg: #eef2ff;
+  --chip-border: #c7d2fe;
+  --chip-text: #1e3a8a;
+  --base-font-size: 18px;
+}
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.55;
+  height: 100%;
+  font-size: var(--base-font-size);
+}
+.page {
+  max-width: 1040px;
+  margin: 28px auto;
+  background: white;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.topbar {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: white;
+  padding: 24px;
+}
+.name { font-size: 28px; font-weight: 800; margin-bottom: 4px; }
+.title { font-weight: 600; font-size: 15px; }
+.contacts { font-size: 13px; margin-top: 8px; display:flex; flex-wrap:wrap; gap:12px 20px; }
+.contacts a { color: #fff; text-decoration: none; }
+.contacts a:hover { text-decoration: underline; }
+.layout { display:grid; grid-template-columns: 290px 1fr; flex: 1; min-height: 0; height: 100%; }
+.sidebar {
+  background: var(--sidebar-bg);
+  padding: 20px 18px 24px;
+  border-right: 1px solid var(--border);
+  font-size: 1em;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.main { padding: 30px 40px 40px 50px; font-size: 3em; line-height: 2; }
+
+.h {
+  font-size: 13px;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--primary);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 5px;
+  margin: 16px 0 8px;
+}
+.chips { display:flex; flex-wrap:wrap; gap:7px; margin-bottom:6px; }
+.chip {
+  background: var(--chip-bg);
+  border: 1px solid var(--chip-border);
+  color: var(--chip-text);
+  font-size: 12px;
+  padding:5px 10px;
+  border-radius:999px;
+  font-weight:600;
+}
+.kv { line-height: 1.55; margin: 5px 0; }
+.edu { margin-top: 4px; line-height:1.5; }
+.sidebar ul { margin: 6px 0 6px 16px; padding: 0; }
+
+.summary {
+  border-left: 3px solid var(--accent);
+  padding: 16px 20px;
+  background: #f9fafb;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.role {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+.role .rt { font-weight: 700; font-size: 15px; }
+.role .co { color: var(--primary); font-weight: 700; }
+.role .meta { font-size: 12px; color: var(--muted); margin: 3px 0 6px; }
+.role ul { margin: 6px 0 0 18px; padding: 0; font-size: 13.5px; line-height: 1.5; }
+.role ul li { margin: 4px 0; }
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { border-right:none; border-bottom:1px solid var(--border); }
+}
+@media print {
+  @page { size: A4; margin: 0; }
+  html, body { font-size: 16px; }
+  body,html { background:white; color:black; }
+  .page { border:0; box-shadow:none; margin:0; max-width: none; width: 100%; page-break-inside: avoid; min-height: 100vh; }
+  .layout { grid-template-columns: 230px 1fr; height: 100%; }
+  .topbar { padding: 14px 16px; background: linear-gradient(90deg, var(--primary), var(--accent)); color: white; }
+  .name { font-size: 20px; margin-bottom: 4px; }
+  .title { font-size: 12px; }
+  .contacts { font-size: 10px; gap: 7px 12px; }
+  .sidebar { padding: 14px 16px; font-size: 10px; background: var(--sidebar-bg); box-sizing: border-box; height: 100%; }
+  .main { padding: 16px 20px 16px 24px; background: white; font-size: 2.5em; line-height: 1.8; }
+  .h { font-size: 10px; margin: 10px 0 5px; padding-bottom: 4px; }
+  .chips { gap: 6px; margin-bottom: 6px; display: flex; flex-wrap: wrap; }
+  .chip { 
+    display: inline-block;
+    font-size: 9px; 
+    padding: 3px 7px; 
+    background: #e0e7ff;
+    border: none;
+    color: #3730a3;
+    border-radius: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .kv, .edu { font-size: 10px; line-height: 1.45; margin: 4px 0; }
+  .sidebar ul { margin: 4px 0 4px 13px; font-size: 10px; line-height: 1.48; }
+  .sidebar ul li { margin: 2px 0; }
+  .summary { padding: 12px 16px; font-size: 11px; line-height: 1.52; background: #f9fafb; }
+  .role { margin-top: 12px; padding-top: 6px; }
+  .role .rt { font-size: 12px; }
+  .role .co { font-size: 11px; }
+  .role .meta { font-size: 9px; margin: 2px 0 4px; }
+  .role ul { margin: 4px 0 0 15px; font-size: 10px; line-height: 1.45; }
+  .role ul li { margin: 2px 0; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="topbar">
+    <div class="name">ABDELRAHMANE FERCHICHI</div>
+    <div class="title">Responsable Innovation & Systèmes Intelligents (AIoT, SaaS, Développement Produit)</div>
+    <div class="contacts">
+    <span>• Vancouver & Montréal, Canada • Résident permanent • Nationalité française</span>
+    <span><a href="mailto:abdelrahmane.ferchichi@gmail.com">abdelrahmane.ferchichi@gmail.com</a></span>
+    <span>+1 581-999-4686</span>
+    </div>
+  </div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="h">Réalisations clés</div>
+      <ul>
+        <li><strong>2 brevets déposés en systèmes AIoT</strong></li>
+        <li><strong>2 M$+ de subventions d'innovation obtenues</strong></li>
+        <li><strong>10–20 M$ de revenus annuels générés par des produits IoT</strong></li>
+        <li><strong>Encadrement de 10+ ingénieurs</strong> (HW, SW, Cloud)</li>
+        <li><strong>Gestion d'un investissement R&D de 14 M€</strong></li>
+      </ul>
+
+      <div class="h">Compétences techniques</div>
+      <div class="chips">
+        <span class="chip">Python</span><span class="chip">MicroPython</span><span class="chip">React Js</span><span class="chip">Edge AI</span><span class="chip">Architecture AIoT</span><span class="chip">Prototypage</span><span class="chip">Intégration HW/SW</span>
+      </div>
+
+      <div class="h">Cloud • DevOps • Outils</div>
+      <div class="kv">Azure DevOps • Docker • Git • CI/CD • Jira • Scrum • SAFe • Qualité • Agile & Lean.</div>
+
+      <div class="h">Soft Skills</div>
+      <ul>
+        <li>Leadership & Coaching d'équipe</li>
+        <li>Innovation & Pensée Stratégique</li>
+        <li>Collaboration interdisciplinaire</li>
+        <li>Rédaction technique & Communication</li>
+      </ul>
+
+      <div class="h">Compétences transversales</div>
+      <div class="kv">Innovation • Collaboration • Proactivité • Communication • Esprit Stratégique • Adaptabilité.</div>
+
+      <div class="h">Langues</div>
+      <div class="kv">Français (natif) • Anglais (courant) • Arabe (intermédiaire)</div>
+
+      <div class="h">Formation</div>
+      <div class="edu">
+        <div><strong>2021</strong> — Master, Transformation numérique - Villes intelligentes et durables, Université Laval (QC).</div>
+        <div><strong>2016</strong> — Diplôme d'ingénieur (apprentissage R&D 3 ans au CEA), CESI, Nice.</div>
+        <div><strong>2013</strong> — Classe préparatoire, Lycée Monge, Chambéry, France.</div>
+        <div><strong>2011</strong> — Bac technique, Génie industriel/mécanique, Lycée Monge.</div>
+      </div>
+
+      <div class="h">Certifications</div>
+        <div class="kv">Scrum Master • Dev Web JS • IoT • Big Data • Data Science • Azure Cloud</div>
+      <!-- Section Produit & Stratégie retirée pour harmonisation -->
+    </aside>
+
+    <main class="main">
+      <div class="h">Résumé professionnel</div>
+      <div class="summary">
+        Ingénieur R&D appliquée et chef d'équipe avec <strong>12+ ans d'expérience</strong> en AIoT, SaaS et innovation produit.<br>
+        Débuts au <strong>CEA</strong> (Commissariat à l'énergie atomique), où j'ai appris à relier la recherche scientifique aux applications concrètes.<br>
+        Depuis 6 ans en startup, j'ai piloté des projets pluridisciplinaires de l'idée à la commercialisation, en dirigeant l'ingénierie, la stratégie et l'exécution go-to-market.<br>
+        Ingénieur polyvalent, orienté résultats, avec un esprit stratégique, passionné par la transformation de l'innovation en impact réel.
+      </div>
+
+      <div class="h" style="margin-top:14px">Expérience professionnelle</div>
+
+      <section class="role">
+        <div class="rt">Co-fondateur & Responsable R&D – Opérations <span class="co">Domely Technologies</span></div>
+        <div class="meta">Montréal, QC • 2020–Présent</div>
+        <ul>
+          <li>Pilotage de programmes R&D de <strong>5 M$</strong>, obtention de plus de <strong>2 M$</strong> de financements publics.</li>
+          <li>Leadership en <strong>innovation AIoT</strong> de l'idée à la production, intégration hardware, software et edge intelligence.</li>
+          <li>Conception, codage et test de <strong>prototypes AIoT</strong> du hardware à l'intégration cloud.</li>
+          <li>Construction de <strong>roadmaps produit</strong>, pipelines R&D et automatisation DevOps pour le déploiement à l'échelle.</li>
+          <li>Gestion fournisseurs, budgets et propriété intellectuelle, avec <strong>2 brevets</strong> déposés et des produits générant <strong>500 K$</strong> de profit annuel.</li>
+        </ul>
+      </section>
+
+      <section class="role">
+        <div class="rt">Analyste programmeur <span class="co">Desjardins</span></div>
+        <div class="meta">Lévis, QC • 2020–2021</div>
+        <ul>
+          <li>Amélioration des applications Java d'entreprise dans des <strong>sprints Agile</strong> pour fiabilité et collaboration.</li>
+          <li>Optimisation de la <strong>scalabilité backend</strong> et support <strong>CI/CD</strong> pour des déploiements réguliers.</li>
+        </ul>
+      </section>
+
+      <section class="role">
+        <div class="rt">Chef de produit & Architecte technique – Solutions IoT <span class="co">Umano Medical</span></div>
+        <div class="meta">Lévis, QC • 2018–2020</div>
+        <ul>
+          <li>Conception de lits hospitaliers intelligents avec monitoring IoT, générant 10–20 M$ de revenus.</li>
+          <li>Définition de la stratégie produit et déploiement dans 60+ hôpitaux au Canada et en Europe.</li>
+          <li>Pilotage du développement full-stack et mise en place d’un cadre Agile R&D (SAFe, Scrum).</li>
+        </ul>
+      </section>
+
+      <section class="role">
+        <div class="rt">Ingénieur R&D <span class="co">Ministère de l'Éducation Nationale</span></div>
+        <div class="meta">Grenoble, France • 2018</div>
+        <ul>
+          <li>Contribution au développement de plateformes éducatives utilisées par 2,8 M d’élèves et 800 K enseignants.</li>
+          <li>Développement Angular.js / Java Spring et pilotage Agile.</li>
+        </ul>
+      </section>
+
+      <section class="role">
+        <div class="rt">Ingénieur R&D (Projet startup) <span class="co">Application mobile santé</span></div>
+        <div class="meta">Grenoble, France • 2017</div>
+        <ul>
+          <li>Pilotage du développement d'une application santé connectée — de l'étude de faisabilité au prototype.</li>
+        </ul>
+      </section>
+
+      <section class="role">
+        <div class="rt">Ingénieur R&D – Systèmes photovoltaïques & technologies solaires <span class="co">(CEA-INES)</span></div>
+        <div class="meta">Grenoble, France • 2013–2016</div>
+        <ul>
+          <li>Recherche sur cellules CIGS et silicium, optimisation des procédés laser.</li>
+          <li>Gestion d’un plan d’investissement de 14 M€ et mise en service d’équipements de 500 K€.</li>
+          <li>Amélioration de la prévision des coûts et de l’efficacité de la recherche.</li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+</div>
+</body>
+</html>

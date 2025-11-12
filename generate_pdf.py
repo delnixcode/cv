@@ -6,6 +6,7 @@ Utilise Playwright pour un rendu de haute qualité
 
 import os
 import sys
+import argparse
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
@@ -66,24 +67,20 @@ def generate_pdf_from_html(html_file, output_file):
 
 def main():
     """Fonction principale"""
-    
-    # Définir les chemins des fichiers
-    current_dir = Path(__file__).parent
-    html_file = current_dir / "cv_vancouver_aiot.html"
-    pdf_file = current_dir / "cv_vancouver_aiot.pdf"
-    
+    parser = argparse.ArgumentParser(description="Génère un PDF à partir d'un fichier HTML de CV.")
+    parser.add_argument("html_file", help="Chemin du fichier HTML source")
+    parser.add_argument("pdf_file", help="Chemin du fichier PDF cible")
+    args = parser.parse_args()
+
     print("🚀 Générateur de PDF pour CV")
     print("=" * 40)
-    print(f"Fichier HTML : {html_file}")
-    print(f"Fichier PDF  : {pdf_file}")
+    print(f"Fichier HTML : {args.html_file}")
+    print(f"Fichier PDF  : {args.pdf_file}")
     print()
-    
-    # Générer le PDF
-    success = generate_pdf_from_html(str(html_file), str(pdf_file))
-    
+    success = generate_pdf_from_html(args.html_file, args.pdf_file)
     if success:
         print(f"\n✨ Le PDF a été généré avec succès !")
-        print(f"📄 Vous pouvez maintenant ouvrir : {pdf_file}")
+        print(f"📄 Vous pouvez maintenant ouvrir : {args.pdf_file}")
     else:
         print(f"\n💥 Échec de la génération du PDF")
         sys.exit(1)
