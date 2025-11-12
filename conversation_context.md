@@ -10,6 +10,7 @@
 - `generate_pdf.py` : Script Python pour générer les PDF à partir de n'importe quel fichier HTML
 
 ## Modifications récentes
+- Titre de l'en-tête du CV français mis à jour : "Responsable R&D & Innovation – AIoT, Produits Intelligents & SaaS"
 - Sidebar du CV français réorganisée pour suivre l'ordre du CV anglais
 - Section "Certifications" du CV français simplifiée pour correspondre au style anglais
 - Génération réussie des deux PDF (anglais et français)
