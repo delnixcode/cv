@@ -1,0 +1,1 @@
+cd /home/delnix/coding/python/cv && python3 generate_pdf.py AFerchichi_Resume.html AFerchichi_Resume.pdf && python3 generate_pdf.py AFerchichi_CV.html AFerchichi_CV.pdf && git add . && git commit -m "Régénération des PDFs" && git push
