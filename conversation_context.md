@@ -1,28 +1,31 @@
-# Contexte du projet CV Vancouver AIoT
+# Contexte du projet CV EA Senior Product Manager
 
-**Date :** 11 novembre 2025
+**Date :** 19 novembre 2025
 
 ## Fichiers principaux
-- `AFerchichi_Resume.html` : CV anglais
-- `AFerchichi_Resume.pdf` : PDF anglais
-- `AFerchichi_CV.html` : CV français
-- `AFerchichi_CV.pdf` : PDF français
-- `generate_pdf.py` : Script Python pour générer les PDF à partir de n'importe quel fichier HTML
+- `application/senior_pm.html` : CV anglais pour EA
+- `application/senior_pm.pdf` : PDF du CV
+- `application/cover_letter.html` : Lettre de motivation HTML
+- `application/cover_letter.pdf` : PDF de la lettre de motivation
+- `generate_pdf.py` : Script Python pour générer les PDF à partir de HTML
+- `README.md` : Instructions et contexte pour l'IA
 
 ## Modifications récentes
-- Titre de l'en-tête du CV français mis à jour : "Responsable R&D & Innovation – AIoT, Produits Intelligents & SaaS"
-- Sidebar du CV français réorganisée pour suivre l'ordre du CV anglais
-- Section "Certifications" du CV français simplifiée pour correspondre au style anglais
-- Génération réussie des deux PDF (anglais et français)
-- Script PDF flexible (arguments source/cible)
+- CV personnalisé pour le poste Senior Product Manager chez EA Creative Innovation
+- Sections expérience réécrites avec wording distinct, mots-clés en gras (OKRs, UX/UI, AIoT, etc.)
+- Sidebar compactée, chips plus petits, police moderne (Poppins)
+- Section Hobbies ajoutée
+- Lettre de motivation créée avec style matching, texte justifié, centré verticalement
+- Contenu de la lettre affiné, répétitions supprimées, secteurs généralisés
+- Génération PDF réussie pour tous les fichiers
 
 ## Utilisation
 Pour générer un PDF :
 ```bash
-python3 generate_pdf.py chemin/vers/source.html chemin/vers/cible.pdf
+python generate_pdf.py source.html target.pdf
 ```
 
 ## Objectif
-CV d'une page, harmonieux, bilingue (anglais/français), prêt pour le marché canadien et international.
+CV et lettre d'une page, modernes, adaptés au secteur tech/gaming, avec mots-clés ATS, prêts pour l'application EA.
 
 Ce fichier est mis à jour pour suivre l'état du projet et les modifications clés.
