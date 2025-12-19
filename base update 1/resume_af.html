@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Abdelrahmane FERCHICHI — Head of R&D – AIoT & Product Innovation </title>
+<style>
+:root {
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --bg: #f9fafb;
+  --text: #111827;
+  --muted: #4b5563;
+  --primary: #1e40af;
+  --accent: #7c3aed;
+  --border: #e5e7eb;
+  --sidebar-bg: #f3f4f6;
+  --chip-bg: #eef2ff;
+  --chip-border: #c7d2fe;
+  --chip-text: #1e3a8a;
+  --base-font-size: 17px;
+}
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.8;
+  height: 100%;
+  font-size: var(--base-font-size);
+}
+.page {
+  max-width: 1040px;
+  margin: 28px auto;
+  background: white;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.topbar {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: white;
+  padding: 24px;
+}
+.name { font-size: 28px; font-weight: 800; margin-bottom: 4px; }
+.title { font-weight: 600; font-size: 15px; }
+.contacts { font-size: 13px; margin-top: 8px; display:flex; flex-wrap:wrap; gap:12px 20px; }
+.contacts a { color: #fff; text-decoration: none; }
+.contacts a:hover { text-decoration: underline; }
+.layout { display:grid; grid-template-columns: 290px 1fr; flex: 1; min-height: 0; height: 100%; }
+.sidebar {
+  background: var(--sidebar-bg);
+  padding: 25px 22px 30px;
+  border-right: 1px solid var(--border);
+  font-size: 0.85em;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+  .main { padding: 40px 50px 50px 60px; font-size: 3em; line-height: 2; }.h {
+  font-size: 16px;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--primary);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 5px;
+  margin: 16px 0 8px;
+}
+.chips { display:flex; flex-wrap:wrap; gap:7px; margin-bottom:6px; }
+.chip {
+  background: var(--chip-bg);
+  border: 1px solid var(--chip-border);
+  color: var(--chip-text);
+  font-size: 12px;
+  padding:5px 10px;
+  border-radius:999px;
+  font-weight:600;
+}
+.kv { line-height: 1.55; margin: 5px 0; }
+.edu { margin-top: 4px; line-height:1.5; }
+.edu div { margin-bottom: 8px; }
+.sidebar ul { margin: 6px 0 6px 16px; padding: 0; }
+
+.summary {
+  border-left: 3px solid var(--accent);
+  padding: 16px 20px;
+  background: #f9fafb;
+  border-radius: 6px;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.role {
+  margin-top: 22px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+.role .rt { font-weight: 700; font-size: 19px; }
+.role .co { color: var(--primary); font-weight: 400; }
+.role .meta { font-size: 15px; color: var(--muted); margin: 3px 0 6px; }
+.role ul { margin: 20px 0 0 28px; padding: 0; font-size: 22px; line-height: 2.2; }
+.role ul li { margin: 14px 0; }
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { border-right:none; border-bottom:1px solid var(--border); }
+}
+@media print {
+  @page { size: A4; margin: 0; }
+  html, body { font-size: 16px; }
+  body,html { background:white; color:black; }
+  .page { border:0; box-shadow:none; margin:0; max-width: none; width: 100%; page-break-inside: avoid; min-height: 100vh; }
+  .layout { grid-template-columns: 230px 1fr; height: 100%; }
+  .topbar { padding: 14px 16px; background: linear-gradient(90deg, var(--primary), var(--accent)); color: white; }
+  .name { font-size: 20px; margin-bottom: 4px; }
+  .title { font-size: 12px; }
+  .contacts { font-size: 10px; gap: 7px 12px; }
+  .sidebar { padding: 14px 16px; font-size: 0.7em; background: var(--sidebar-bg); box-sizing: border-box; height: 100%; }
+  .main { padding: 16px 20px 16px 24px; background: white; font-size: 2.5em; line-height: 1.8; }
+  .h { font-size: 10px; margin: 10px 0 5px; padding-bottom: 4px; }
+  .chips { gap: 6px; margin-bottom: 6px; display: flex; flex-wrap: wrap; }
+  .chip { 
+    display: inline-block;
+    font-size: 9px; 
+    padding: 3px 7px; 
+    background: #e0e7ff;
+    border: none;
+    color: #3730a3;
+    border-radius: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .kv, .edu { font-size: 10px; line-height: 1.45; margin: 4px 0; }
+  .sidebar ul { margin: 4px 0 4px 13px; font-size: 10px; line-height: 1.48; }
+  .sidebar ul li { margin: 2px 0; }
+  .summary { padding: 12px 16px; font-size: 11px; line-height: 1.52; background: #f9fafb; }
+  .role { margin-top: 12px; padding-top: 6px; }
+  .role .rt { font-size: 12px; }
+  .role .co { font-size: 11px; }
+  .role .meta { font-size: 9px; margin: 2px 0 4px; }
+  .role ul { margin: 4px 0 0 15px; font-size: 10px; line-height: 1.45; }
+  .role ul li { margin: 2px 0; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="topbar">
+    <div class="name">ABDELRAHMANE FERCHICHI</div>
+    <div class="title">Innovation & Intelligent Systems Lead (AIoT, SaaS, Product Development)</div>
+    <div class="contacts">
+    <span>• Vancouver & Montreal, Canada • PR Holder (Canada) • French citizenship</span>
+    <span><a href="mailto:abdelrahmane.ferchichi@gmail.com">abdelrahmane.ferchichi@gmail.com</a></span>
+    <span>+1 581-999-4686</span>
+    </div>
+    <a href="https://www.linkedin.com/in/abdelrahmane-ferchichi-m-sc-517b86117/" style="position: absolute; top: 5px; right: 5px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><img src="qr.png" alt="LinkedIn QR" width="50" style="margin-left: 5px;"></a>
+  </div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="h">Soft Skills</div>
+      <ul>
+        <li>Leadership & Team Coaching</li>
+        <li>Innovation & Strategic Thinking</li>
+        <li>Cross-functional Collaboration</li>
+        <li>Technical Writing & Communication</li>
+      </ul>
+
+      <div class="h">Technical Skills</div>
+      <div class="chips">
+        <span class="chip">Python</span><span class="chip">MicroPython</span><span class="chip">React Js</span><span class="chip">Edge AI</span><span class="chip">AIoT Architecture</span><span class="chip">Prototyping</span><span class="chip">Hardware–Software Integration</span>
+      </div>
+
+      <div class="h">Cloud • DevOps • Tools</div>
+      <div class="kv">Azure DevOps • Docker • Git • CI/CD • Jira • Scrum • SAFe • Quality Processes • Agile & Lean.</div>
+
+      <div class="h">Core Competencies</div>
+      <div class="kv">Innovation • Collaboration • Proactivity • Communication • Strategic Thinking • Adaptability.</div>
+
+      <div class="h">Education</div>
+      <div class="edu">
+        <div><strong>2021</strong> — <strong>Master's, Digital Transformation</strong> - Smart and Sustainable Cities, Université Laval (QC).</div>
+        <div><strong>2016</strong> — <strong>Engineer's Degree</strong> (R&D 3-year apprenticeship at CEA), CESI, Nice, France .</div>
+        <div><strong>2013</strong> — <strong>Preparatory Program </strong>, Lycée Monge, Chambéry, France.</div>
+        <div><strong>2011</strong> — <strong>Technical Baccalaureate, Industrial</strong>/Mechanical Engineering, Lycée Monge, Chambéry, France.</div>
+      </div>
+
+      <div class="h">Certifications</div>
+      <div class="kv">Scrum Master • JS Web Dev • IoT • Big Data • Data Science • Azure Cloud</div>
+
+      <div class="h">Languages</div>
+      <div class="kv">French (Native) • English (Fluent) • Arabic (Intermediate)</div>
+
+    </aside>
+
+    <main class="main">
+      <div class="h">Professional Summary</div>
+      <div class="summary">
+        Hands-on R&D and product leader with <strong>12+ years</strong> in AIoT, SaaS, and Cloud systems.<br>
+        From CEA (French Alternative Energies and Atomic Energy Commission) to startup innovation, I've designed and delivered <strong>connected products</strong> that bridge hardware, software, and data.
+        Proven track record leading <strong>cross-functional teams</strong> and scaling IoT architectures into market-ready solutions.
+      </div>
+
+      <div class="h" style="margin-top:14px">Professional Experience</div>
+
+      <section class="role">
+  <div class="rt">Co-Founder – R&D & Operations Lead | AIoT, SaaS | <span class="co">Domely Technologies</span></div>
+  <div class="meta"> AI-powered IoT solutions for roof protection and home safety | Montréal, QC • <strong>2019</strong> – Present • <a href="https://domely.io" style="color: #1e40af; text-decoration: none;">domely.io</a></div>
+        <ul>
+          <li>Led R&amp;D and operations for AIoT, integrating SaaS components from <strong>concept to commercialization</strong>.</li>
+          <li>Managed <strong>$5M</strong> in R&amp;D programs and secured over <strong>$3M</strong> in public and private funding.</li>
+          <li>Developed IoT solutions combining sensors, embedded systems, and cloud architectures, with <strong>2 patents filed</strong>.</li>
+          <li>Optimized production, logistics, and customer feedback processes, generating over <strong>$500K</strong> in annual profit.</li>
+        </ul>
+      </section>
+
+      <section class="role">
+        <div class="rt">Programmer Analyst | <span class="co">Desjardins</span></div>
+        <div class="meta">Lévis, QC • <strong>2020</strong>–<strong>2021</strong></div>
+        <ul>
+          <li>Contributed to improving core banking features used by <strong>millions</strong> of clients.</li>
+          <li>Developed and integrated RESTful APIs, wrote technical documentation and functional specifications.</li>
+          <li>Supported <strong>CI/CD (Continuous Integration and Deployment)</strong> and optimized Java enterprise applications for performance and reliability.</li>
+        </ul>
+      </section>
+
+      <section class="role">
+        <div class="rt">Product Manager & Technical Architect | <span class="co">Umano Medical</span></div>
+        <div class="meta">Lévis, QC • <strong>2018</strong>–<strong>2020</strong></div>
+        <ul>
+          <li><strong>Led IoT</strong> connectivity and SaaS integration for smart hospital beds, deployed in several hospitals and generating <strong>$10–20M</strong> in annual revenue.</li>
+          <li>Drive product strategy, market positioning, and commercialization.</li>
+          <li>Deliver <strong>full-stack solutions</strong> and establish Agile R&D frameworks (SAFe, Scrum).</li>
+        </ul>
+      </section>
+
+      <section class="role">
+        <div class="rt">R&D Engineer | <span class="co">French Ministry of National Education</span></div>
+        <div class="meta">Grenoble, France • <strong>2018</strong></div>
+        <ul>
+          <li>Contributed to the national development team creating digital platforms for <strong>2.8M</strong> students and <strong>800K</strong> teachers.</li>
+          <li>Developed research <strong>project management</strong> tools using Angular.js and Java Spring.</li>
+          <li>Authored functional specifications, facilitated Agile, implemented CI/CD and conducted UAT.</li>
+        </ul>
+      </section>
+
+      <section class="role">
+        <div class="rt">R&D Engineer (Startup Project) | <span class="co">Mobile Healthcare App</span></div>
+        <div class="meta">Grenoble, France • <strong>2017</strong></div>
+        <ul>
+          <li>Lead development of a connected healthcare MVP from feasibility to <strong>prototype</strong>.</li>
+        </ul>
+      </section>
+
+      <section class="role">
+  <div class="rt">R&D Engineer – Photovoltaic Systems & Solar Technologies | <span class="co">CEA INES (National Institute of Solar Energy)</span></div>
+        <div class="meta">Grenoble, France • <strong>2013</strong>–<strong>2016</strong></div>
+        <ul>
+          <li><strong>Involved in R&D</strong> on next-generation photovoltaic cells and precision laser-cutting processes.</li>
+          <li>Developed internal tools improving cost forecasting and research efficiency.</li>
+          <li>Managed <strong>€14M</strong> in R&D investments and commissioned <strong>€500K</strong> in advanced lab equipment.</li>
+        </ul>
+      </section>
+
+      <!-- ATS Keywords for recruiters -->
+      <div style="display:none">
+        AIoT, Edge AI, IoT Architecture, Cloud, Azure, AWS, Product Roadmap, DevOps, Machine Learning, SaaS, R&D Strategy, Agile, Scrum, MVP, CI/CD, Embedded Systems, Technical Leadership, Innovation Management
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>
